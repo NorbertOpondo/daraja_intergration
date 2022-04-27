@@ -53,6 +53,8 @@ def handle_payment_callback():
 
 @payment_callback.route('/fetch_payments', methods=['GET'])
 def fetch_payments():
+    ''' Fetch all the payments from the Payments table '''
+
     payments = Payment.query.all()
     data = []
     total_amount_collected = 0

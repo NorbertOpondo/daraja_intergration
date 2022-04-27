@@ -9,6 +9,6 @@ class Config(object):
     DARAJA_CONSUMER_SECRET = os.getenv('DARAJA_CONSUMER_SECRET')
     DARAJA_PASS_KEY = os.getenv('DARAJA_PASS_KEY')
     MPESA_BUSINESS_SHORT_CODE = '174379'
-    CALLBACK_URL = 'https://53e2-102-140-196-253.ngrok.io/payment_callback'
+    CALLBACK_URL =  os.getenv('CALLBACK_URL')
     DARAJA_STK_PUSH_URL = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest'
 
