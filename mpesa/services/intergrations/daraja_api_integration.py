@@ -31,7 +31,7 @@ def get_access_token():
     byte_string = string_to_encode.encode()
     encoded_byte_string = base64.b64encode(byte_string)
     
-    url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
+    url = current_app.config['DARAJA_AUTH_TOKEN_URL']
 
     header = {
         'Authorization' : 'Basic ' +encoded_byte_string.decode()
