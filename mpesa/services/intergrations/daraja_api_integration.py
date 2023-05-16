@@ -33,11 +33,13 @@ def get_access_token():
     
     url = current_app.config['DARAJA_AUTH_TOKEN_URL']
 
+    print("encoded stuff",encoded_byte_string.decode())
     header = {
         'Authorization' : 'Basic ' +encoded_byte_string.decode()
     }
     response = requests.get(url, headers = header)
 
+    print("get token response", response)
     json_response = response.json()
     
     return json_response['access_token']
